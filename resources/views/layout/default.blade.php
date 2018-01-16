@@ -2,8 +2,15 @@
 <html>
 <head>
     <title>@yield('title','Simple App')</title>
+    <link rel="stylesheet" href="/css/app.css">
 </head>
 <body>
-@yield('content')
+    @include('layout._header')
+    <div class="container">
+        <div class="col-md-offset-1 col-md-10">
+            @yield('content')
+            @include('layout._footer')
+        </div>
+    </div>
 </body>
 </html>
